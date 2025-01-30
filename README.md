@@ -10,7 +10,7 @@ The **[MultiversX](https://multiversx.com/) Agent Kit** is an open-source toolki
 
 At the heart of **MultiversX Agent Kit** is [**Eliza**](https://github.com/multiversx/eliza/tree/bed9388575e5a9fe93abe9457479c9c7e89acbf6), an advanced **AI Agent Framework** designed for seamless integration with different AI Models, Blockchain Networks, Social Media Platforms and other real-world applications. The **MultiversX Eliza Plugin** extends its capabilities, enabling direct interaction with the **MultiversX Blockchain** for automated, secure, and intelligent transactions.  
 
-### 🔌 MultiversX Eliza Plugin Features  
+## 🔌 MultiversX Eliza Plugin Features  
 With the [MultiversX Eliza Plugin](https://github.com/multiversx/eliza/tree/bed9388575e5a9fe93abe9457479c9c7e89acbf6/packages/plugin-multiversx), AI Agents can:  
 - 💸 **Send EGLD & ESDT Tokens** – Effortlessly transfer assets within the **MultiversX ecosystem**.  
 - 🏗 **Create & Manage Tokens** – Automate **token issuance, configuration, and lifecycle management**.  
@@ -21,6 +21,20 @@ With the [MultiversX Eliza Plugin](https://github.com/multiversx/eliza/tree/bed9
 - 📊 **Track Transaction Status** – Monitor transaction completion in **real-time** with AI-driven status tracking.  
 - 🏷 **Built-in Denomination Handling** – Simplify **unit conversions and precision management** for EGLD & ESDT assets.  
 - 🛠 **Comprehensive Error Handling** – Minimize failures with **robust, automated troubleshooting**.   
+
+## 🎥 Video Tutorials  
+
+For a step-by-step guide on setting up **Eliza** and understanding its **plugin & client systems**, check out the following tutorials:  
+
+📺 **AI Agents on MultiversX with Eliza Framework - How to Setup Eliza**  
+🔗 [Watch the tutorial](https://www.youtube.com/watch?v=vf-umucBhPI)  
+
+📺 **AI Agents on MultiversX with Eliza Framework - Plugin and Client Systems**  
+🔗 [Watch the tutorial](https://www.youtube.com/watch?v=G-GPnjD-kMU)  
+
+These videos provide a **detailed walkthrough** to help you get started quickly and efficiently! 🚀  
+
+---
 
 # 🚀 AI Agents - Gateway Features  
 With **MultiversX Agent Kit**, powered by [Portkey's AI Gateway](https://github.com/multiversx/gateway/tree/a10d0cacb6d4e6f8125bc3b4c44a83c0e19c2ad0), your AI Agents gain access to **250+ model providers** and **full integration with leading AI Agent Frameworks**, enabling **seamless, intelligent, and autonomous decision-making** across the **MultiversX Ecosystem**.  
@@ -50,6 +64,8 @@ With **MultiversX Agent Kit**, powered by [Portkey's AI Gateway](https://github.
 
 ### 🤝 Seamless Collaboration & AI Workflows  
 - **Collaborative Prompt Engineering** – Create, manage, and **version prompt templates** through a **universal prompt playground** for streamlined AI development.  
+
+---
 
 # 📦 Installation Guide  
 
@@ -128,5 +144,3 @@ npm run dev:node
 ---
 
 🎉 **That's it! Your AI Agents are now running and ready to interact with the MultiversX Ecosystem.** 🚀  
-
-
