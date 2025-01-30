@@ -10,8 +10,10 @@ node -v
 ```
 
 ### Execute the setup script:
+```
 chmod +x setup.sh
 ./setup.sh
+```
 
 ### Env setup:
 In eliza submodule, configure the following env variables in .env:
