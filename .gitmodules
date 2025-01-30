@@ -1,0 +1,6 @@
+[submodule "eliza"]
+	path = eliza
+	url = https://github.com/multiversx/eliza
+[submodule "gateway"]
+	path = gateway
+	url = https://github.com/multiversx/gateway
