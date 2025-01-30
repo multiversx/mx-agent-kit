@@ -4,14 +4,14 @@
 
 </div>
 
-The **[MultiversX](https://multiversx.com/) Agent Kit** is an open-source toolkit empowering AI Agents to seamlessly interact with the **MultiversX Ecosystem**. Harnessing the combined strength of **[Eliza AI Agent Framework](https://github.com/multiversx/eliza/tree/bed9388575e5a9fe93abe9457479c9c7e89acbf6)** and **[Portkey's AI Gateway](https://github.com/multiversx/gateway/tree/a10d0cacb6d4e6f8125bc3b4c44a83c0e19c2ad0)**, the **MultiversX Agent Kit** connects your agents to 250+ LLM providers and most major **AI Agent Frameworks**.
+The **[MultiversX](https://multiversx.com/) Agent Kit** is an open-source toolkit empowering AI Agents to seamlessly interact with the **MultiversX Ecosystem**. Harnessing the combined strength of **[Eliza AI Agent Framework](https://github.com/multiversx/eliza)** and **[Portkey's AI Gateway](https://github.com/multiversx/gateway/)**, the **MultiversX Agent Kit** connects your agents to 250+ LLM providers and most major **AI Agent Frameworks**.
 
 # 🤖 Eliza & The MultiversX Plugin  
 
-At the heart of **MultiversX Agent Kit** is [**Eliza**](https://github.com/multiversx/eliza/tree/bed9388575e5a9fe93abe9457479c9c7e89acbf6), an advanced **AI Agent Framework** designed for seamless integration with different AI Models, Blockchain Networks, Social Media Platforms and other real-world applications. The **MultiversX Eliza Plugin** extends its capabilities, enabling direct interaction with the **MultiversX Blockchain** for automated, secure, and intelligent transactions.  
+At the heart of **MultiversX Agent Kit** is [**Eliza**](https://github.com/multiversx/eliza), an advanced **AI Agent Framework** designed for seamless integration with different AI Models, Blockchain Networks, Social Media Platforms and other real-world applications. The **MultiversX Eliza Plugin** extends its capabilities, enabling direct interaction with the **MultiversX Blockchain** for automated, secure, and intelligent transactions.  
 
 ## 🔌 MultiversX Eliza Plugin Features  
-With the [MultiversX Eliza Plugin](https://github.com/multiversx/eliza/tree/bed9388575e5a9fe93abe9457479c9c7e89acbf6/packages/plugin-multiversx), AI Agents can:  
+With the **[MultiversX Eliza Plugin](https://github.com/multiversx/eliza/tree/develop/packages/plugin-multiversx)**, AI Agents can:  
 - 💸 **Send EGLD & ESDT Tokens** – Effortlessly transfer assets within the **MultiversX ecosystem**.  
 - 🏗 **Create & Manage Tokens** – Automate **token issuance, configuration, and lifecycle management**.  
 - 🔄 **Swap Tokens** – Enable **liquidity management and token trading** via automated AI-driven execution.  
@@ -37,11 +37,11 @@ These videos provide a **detailed walkthrough** to help you get started quickly 
 ---
 
 # 🚀 AI Agents - Gateway Features  
-With **MultiversX Agent Kit**, powered by [Portkey's AI Gateway](https://github.com/multiversx/gateway/tree/a10d0cacb6d4e6f8125bc3b4c44a83c0e19c2ad0), your AI Agents gain access to **250+ model providers** and **full integration with leading AI Agent Frameworks**, enabling **seamless, intelligent, and autonomous decision-making** across the **MultiversX Ecosystem**.  
+With **MultiversX Agent Kit**, powered by [Portkey's AI Gateway](https://github.com/multiversx/gateway/), your AI Agents gain access to **250+ model providers** and **full integration with leading AI Agent Frameworks**, enabling **seamless, intelligent, and autonomous decision-making** across the **MultiversX Ecosystem**.  
 
 ### 🌎 Universal Model & AI Agent Framework Support  
 - **250+ Model Providers** – Seamlessly connect to a vast array of **LLMs, vision models, and multimodal AI solutions**.  
-- **Full AI Agent Framework Integration** – Natively supports **[Eliza](https://github.com/multiversx/eliza/tree/bed9388575e5a9fe93abe9457479c9c7e89acbf6), OpenAI Swarm, LlamaIndex, LangChain, LangGraph, AutoGen, CrewAI, Phidata, Control Flow, and Custom Agents**.  
+- **Full AI Agent Framework Integration** – Natively supports **[Eliza](https://github.com/multiversx/eliza), OpenAI Swarm, LlamaIndex, LangChain, LangGraph, AutoGen, CrewAI, Phidata, Control Flow, and Custom Agents**.  
 - **Cross-Provider Compatibility** – Effortlessly switch between AI providers without changing your implementation.  
 - **Multi-Modal AI Support** – Call **vision, text-to-speech, speech-to-text, and image generation models** from multiple sources with a **unified API**.  
 
@@ -98,7 +98,7 @@ chmod +x setup.sh
 ---
 
 ### 🌍 Step 2: Configure Environment Variables  
-In the **[Eliza submodule](https://github.com/multiversx/eliza/tree/bed9388575e5a9fe93abe9457479c9c7e89acbf6)**, set up your `.env` file with the necessary API keys:  
+In the **[Eliza submodule](https://github.com/multiversx/eliza)**, set up your `.env` file with the necessary API keys:  
 
 ```sh
 PORTKEY_PROVIDER_API_KEY=   # Your Portkey API Key (e.g., sk-XXXX for OpenAI)
