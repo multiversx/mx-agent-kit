@@ -19,12 +19,12 @@ check_env_variables() {
     exit 1
   fi
 
-if [[ -z "${PORTKEY_MODEL_PROVIDER}" ]]; then
+  if [[ -z "${PORTKEY_MODEL_PROVIDER}" ]]; then
     echo "❌ Error: Required environment variable PORTKEY_MODEL_PROVIDER is not set or has no value in $ENV_FILE."
     exit 1
   fi
 
-if [[ -z "${PORTKEY_MODEL}" ]]; then
+  if [[ -z "${PORTKEY_MODEL}" ]]; then
     echo "❌ Error: Required environment variable PORTKEY_MODEL is not set or has no value in $ENV_FILE."
     exit 1
   fi
@@ -33,7 +33,6 @@ if [[ -z "${PORTKEY_MODEL}" ]]; then
   echo "✅ PORTKEY_MODEL_PROVIDER is set to: '$PORTKEY_MODEL_PROVIDER'"
   echo "✅ PORTKEY_MODEL is set to: '$PORTKEY_MODEL'"
 }
-
 
 # Required Node.js version
 REQUIRED_NODE_VERSION="v23.3.0"
@@ -59,22 +58,22 @@ OS="$(uname)"
 case "$OS" in
   "Darwin") # macOS
     echo "Detected macOS"
-    osascript -e "tell application \"Terminal\" to do script \"source ~/.nvm/nvm.sh && nvm use 23.3 && cd '$PROJECT_DIR/eliza' && pnpm run start\""
-    osascript -e "tell application \"Terminal\" to do script \"source ~/.nvm/nvm.sh && nvm use 23.3 && cd '$PROJECT_DIR/eliza' && pnpm run start:client\""
-    osascript -e "tell application \"Terminal\" to do script \"source ~/.nvm/nvm.sh && nvm use 23.3 && cd '$PROJECT_DIR/gateway' && npm run dev:node\""
+    osascript -e "tell application \"Terminal\" to do script \"cd '$PROJECT_DIR/eliza' && pnpm run start\""
+    osascript -e "tell application \"Terminal\" to do script \"cd '$PROJECT_DIR/eliza' && pnpm run start:client\""
+    osascript -e "tell application \"Terminal\" to do script \"cd '$PROJECT_DIR/gateway' && npm run dev:node\""
     ;;
   
   "Linux") # Linux
     echo "Detected Linux"
-    gnome-terminal -- bash -c "source ~/.nvm/nvm.sh && nvm use 23.3 && cd '$PROJECT_DIR/eliza' && pnpm run start; exec bash" &
-    gnome-terminal -- bash -c "source ~/.nvm/nvm.sh && nvm use 23.3 && cd '$PROJECT_DIR/eliza' && pnpm run start:client; exec bash" &
-    gnome-terminal -- bash -c "source ~/.nvm/nvm.sh && nvm use 23.3 && cd '$PROJECT_DIR/gateway' && npm run dev:node; exec bash" &
+    gnome-terminal -- bash -c "cd '$PROJECT_DIR/eliza' && pnpm run start; exec bash" &
+    gnome-terminal -- bash -c "cd '$PROJECT_DIR/eliza' && pnpm run start:client; exec bash" &
+    gnome-terminal -- bash -c "cd '$PROJECT_DIR/gateway' && npm run dev:node; exec bash" &
     ;;
   
   "MINGW64_NT"*|"CYGWIN_NT"*|"MSYS_NT"*) # Windows (Git Bash, Cygwin, MSYS)
     echo "Detected Windows"
-    start cmd /k "nvm use 23.3 && cd /d \"$PROJECT_DIR\\eliza\" && pnpm run start"
-    start cmd /k "nvm use 23.3 && cd /d \"$PROJECT_DIR\\eliza\" && pnpm run start:client"
+    start cmd /k "cd /d \"$PROJECT_DIR\\eliza\" && pnpm run start"
+    start cmd /k "cd /d \"$PROJECT_DIR\\eliza\" && pnpm run start:client"
     start cmd /k "cd /d \"$PROJECT_DIR\\gateway\" && npm run dev:node"
     ;;
   
