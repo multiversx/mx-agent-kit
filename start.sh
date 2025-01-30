@@ -1,5 +1,40 @@
 #!/bin/bash
 
+# Get the absolute path of the current directory
+PROJECT_DIR="$(pwd)"
+
+check_env_variables() {
+  ENV_FILE="$PROJECT_DIR/eliza/.env"
+
+  # Check if the .env file exists
+  if [[ ! -f "$ENV_FILE" ]]; then
+    echo "❌ Error: .env file not found in $PROJECT_DIR/eliza."
+    exit 1
+  fi
+
+  source "$ENV_FILE"
+
+  if [[ -z "${PORTKEY_PROVIDER_API_KEY}" ]]; then
+    echo "❌ Error: Required environment variable PORTKEY_PROVIDER_API_KEY is not set or has no value in $ENV_FILE."
+    exit 1
+  fi
+
+if [[ -z "${PORTKEY_MODEL_PROVIDER}" ]]; then
+    echo "❌ Error: Required environment variable PORTKEY_MODEL_PROVIDER is not set or has no value in $ENV_FILE."
+    exit 1
+  fi
+
+if [[ -z "${PORTKEY_MODEL}" ]]; then
+    echo "❌ Error: Required environment variable PORTKEY_MODEL is not set or has no value in $ENV_FILE."
+    exit 1
+  fi
+
+  echo "✅ PORTKEY_PROVIDER_API_KEY is set to: '$PORTKEY_PROVIDER_API_KEY'"
+  echo "✅ PORTKEY_MODEL_PROVIDER is set to: '$PORTKEY_MODEL_PROVIDER'"
+  echo "✅ PORTKEY_MODEL is set to: '$PORTKEY_MODEL'"
+}
+
+
 # Required Node.js version
 REQUIRED_NODE_VERSION="v23.3.0"
 
@@ -15,8 +50,7 @@ fi
 
 echo "✅ Node.js version check passed: $INSTALLED_NODE_VERSION"
 
-# Get the absolute path of the current directory
-PROJECT_DIR="$(pwd)"
+check_env_variables
 
 # Detect OS and open new terminals for each process
 echo "Starting services in separate terminals..."
