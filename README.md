@@ -2,7 +2,7 @@
 
 # MultiversX AI Agent Kit
 
-![mx-agent-kit.png](https://cdn.multiversx.com/misc/mx-agent-kit.png) 
+![mx-agent-kit.png](https://cdn.multiversx.com/misc/mx-agent-kit.gif) 
 
 </div>
 
