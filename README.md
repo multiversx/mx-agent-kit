@@ -131,9 +131,7 @@ chmod +x start.sh
 ./start.sh
 ```
 
----
-
-### ⚡ Alternative: Manual Start  
+#### ⚡ Alternative: Manual Start  
 
 #### 🧠 **Start Eliza** (Requires 2 terminals)  
 
