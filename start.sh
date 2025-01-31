@@ -34,6 +34,36 @@ check_env_variables() {
   echo "✅ PORTKEY_MODEL is set to: '$PORTKEY_MODEL'"
 }
 
+open_browser() {
+  sleep 5
+  
+  case "$OS" in
+    "Darwin") # macOS
+      open "http://localhost:5173"
+      open "http://localhost:8787/public"
+      ;;
+    
+    "Linux") # Linux
+      if command -v xdg-open &> /dev/null; then
+        xdg-open "http://localhost:5173"
+        xdg-open "http://localhost:8787/public"
+      else
+        echo "❌ Error: No default browser found. Install xdg-utils or specify a browser manually."
+      fi
+      ;;
+    
+    "MINGW64_NT"*|"CYGWIN_NT"*|"MSYS_NT"*) # Windows
+      timeout /t 5 >nul
+      start "" "http://localhost:5173"
+      start "" "http://localhost:8787/public"
+      ;;
+    
+    *)
+      echo "Unsupported OS: $OS"
+      ;;
+  esac
+}
+
 # Required Node.js version
 REQUIRED_NODE_VERSION="v23.3.0"
 
@@ -61,8 +91,7 @@ case "$OS" in
     osascript -e "tell application \"Terminal\" to do script \"cd '$PROJECT_DIR/eliza' && pnpm run start\""
     osascript -e "tell application \"Terminal\" to do script \"cd '$PROJECT_DIR/eliza' && pnpm run start:client\""
     osascript -e "tell application \"Terminal\" to do script \"cd '$PROJECT_DIR/gateway' && npm run dev:node\""
-    open -a "Google Chrome" "http://localhost:5173"
-    open -a "Google Chrome" "http://localhost:8787/public"
+    open_browser
     ;;
   
   "Linux") # Linux
@@ -70,8 +99,7 @@ case "$OS" in
     gnome-terminal -- bash -c "cd '$PROJECT_DIR/eliza' && pnpm run start; exec bash" &
     gnome-terminal -- bash -c "cd '$PROJECT_DIR/eliza' && pnpm run start:client; exec bash" &
     gnome-terminal -- bash -c "cd '$PROJECT_DIR/gateway' && npm run dev:node; exec bash" &
-    google-chrome "http://localhost:5173"
-    google-chrome "http://localhost:8787/public"
+    open_browser
     ;;
   
   "MINGW64_NT"*|"CYGWIN_NT"*|"MSYS_NT"*) # Windows (Git Bash, Cygwin, MSYS)
@@ -79,8 +107,7 @@ case "$OS" in
     start cmd /k "cd /d \"$PROJECT_DIR\\eliza\" && pnpm run start"
     start cmd /k "cd /d \"$PROJECT_DIR\\eliza\" && pnpm run start:client"
     start cmd /k "cd /d \"$PROJECT_DIR\\gateway\" && npm run dev:node"
-    start chrome "http://localhost:5173"
-    start chrome "http://localhost:8787/public"
+    open_browser
     ;;
   
   *)
