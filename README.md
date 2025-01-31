@@ -80,10 +80,15 @@ Before starting, ensure you have the following dependencies installed:
 - **[Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)** – Version **23.3**  
 - **[PNPM](https://pnpm.io/installation)** – Version **9+**  
 
-### 🔍 Verify Your Node.js Version  
+### 🔍 Verify Your Node.js and PNPM Versions
 Run the following command to check if Node.js is installed correctly:  
 ```sh
 node -v
+```
+
+Run the following command to check if PNPM is installed correctly:  
+```sh
+pnpm -v
 ```
 
 ---
