@@ -52,12 +52,6 @@ open_browser() {
       fi
       ;;
     
-    "MINGW64_NT"*|"CYGWIN_NT"*|"MSYS_NT"*) # Windows
-      timeout /t 5 >nul
-      start "" "http://localhost:8787/public/logs"
-      start "" "http://localhost:5173"
-      ;;
-    
     *)
       echo "Unsupported OS: $OS"
       ;;
@@ -102,16 +96,9 @@ case "$OS" in
     open_browser
     ;;
   
-  "MINGW64_NT"*|"CYGWIN_NT"*|"MSYS_NT"*) # Windows (Git Bash, Cygwin, MSYS)
-    echo "Detected Windows"
-    start cmd /k "cd /d \"$PROJECT_DIR\\eliza\" && pnpm run start"
-    start cmd /k "cd /d \"$PROJECT_DIR\\eliza\" && pnpm run start:client"
-    start cmd /k "cd /d \"$PROJECT_DIR\\gateway\" && npm run dev:node"
-    open_browser
-    ;;
-  
   *)
     echo "Unsupported OS: $OS"
+    echo "Try to start manually: https://github.com/multiversx/mx-agent-kit?tab=readme-ov-file#-start-eliza-requires-2-terminals."
     exit 1
     ;;
 esac
