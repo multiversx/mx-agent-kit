@@ -91,6 +91,18 @@ Run the following command to check if PNPM is installed correctly:
 pnpm -v
 ```
 
+### 📥 Clone the Repository  
+
+To get started, **clone the MultiversX Agent Kit repository** by running:  
+```sh
+git clone git@github.com:multiversx/mx-agent-kit.git
+```  
+
+Once cloned, navigate into the project folder:  
+```sh
+cd mx-agent-kit
+```  
+
 ---
 
 ## ⚙️ Local Setup  
@@ -138,6 +150,9 @@ chmod +x start.sh
 ./start.sh
 ```
 
+⚠️ **Windows Users:** 
+- The automated script is **currently not supported** on Windows. **Windows users must use the manual method** below, but everything else works the same.  
+
 #### ⚡ Alternative: Manual Start  
 
 #### 🧠 **Start Eliza** (Requires 2 terminals)  
@@ -154,11 +169,19 @@ cd eliza
 pnpm run start:client
 ```
 
+🌐 **Eliza Agent Dashboard**: 
+- Once started, access the **Eliza Agent Dashboard** at: [http://localhost:5173/](http://localhost:5173/)  
+
 #### 🌉 **Start AI Gateway** (Requires 1 terminal)  
+
+In **Terminal 3**, start the **AI Gateway**:  
 ```sh
 cd gateway
 npm run dev:node
 ```
+
+🌐 **AI Gateway Explorer**: 
+- Once started, access the **AI Gateway Explorer** at: [http://localhost:8787/public/](http://localhost:8787/public/)  
 
 ---
 
