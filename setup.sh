@@ -31,8 +31,7 @@ else
   echo ".env already exists. Skipping copy."
 fi
 
-
-npm install -g pnpm
+# Install required packages for Eliza and build
 pnpm install --no-frozen-lockfile
 pnpm run build
 cd ..
