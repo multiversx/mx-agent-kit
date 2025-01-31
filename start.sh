@@ -61,6 +61,8 @@ case "$OS" in
     osascript -e "tell application \"Terminal\" to do script \"cd '$PROJECT_DIR/eliza' && pnpm run start\""
     osascript -e "tell application \"Terminal\" to do script \"cd '$PROJECT_DIR/eliza' && pnpm run start:client\""
     osascript -e "tell application \"Terminal\" to do script \"cd '$PROJECT_DIR/gateway' && npm run dev:node\""
+    open -a "Google Chrome" "http://localhost:5173"
+    open -a "Google Chrome" "http://localhost:8787/public"
     ;;
   
   "Linux") # Linux
@@ -68,6 +70,8 @@ case "$OS" in
     gnome-terminal -- bash -c "cd '$PROJECT_DIR/eliza' && pnpm run start; exec bash" &
     gnome-terminal -- bash -c "cd '$PROJECT_DIR/eliza' && pnpm run start:client; exec bash" &
     gnome-terminal -- bash -c "cd '$PROJECT_DIR/gateway' && npm run dev:node; exec bash" &
+    google-chrome "http://localhost:5173"
+    google-chrome "http://localhost:8787/public"
     ;;
   
   "MINGW64_NT"*|"CYGWIN_NT"*|"MSYS_NT"*) # Windows (Git Bash, Cygwin, MSYS)
@@ -75,6 +79,8 @@ case "$OS" in
     start cmd /k "cd /d \"$PROJECT_DIR\\eliza\" && pnpm run start"
     start cmd /k "cd /d \"$PROJECT_DIR\\eliza\" && pnpm run start:client"
     start cmd /k "cd /d \"$PROJECT_DIR\\gateway\" && npm run dev:node"
+    start chrome "http://localhost:5173"
+    start chrome "http://localhost:8787/public"
     ;;
   
   *)
