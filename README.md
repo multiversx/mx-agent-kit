@@ -102,9 +102,23 @@ In the **[Eliza submodule](https://github.com/multiversx/eliza)**, set up your `
 
 ```sh
 PORTKEY_PROVIDER_API_KEY=   # Your Portkey Model Provider API Key (e.g., sk-XXXX for OpenAI)
-PORTKEY_MODEL_PROVIDER=     # Model Provider (e.g., openai, anthropic, deepseek, etc.)
-PORTKEY_MODEL=              # Model Name (e.g., gpt-4o-mini, claude-3-opus-20240229, deepseek-chat, etc.)
+PORTKEY_MODEL_PROVIDER=     # Model Provider (e.g., google, openai, anthropic, deepseek, etc.)
+PORTKEY_MODEL=              # Model Name (e.g., gemini-1.5-flash, gpt-4o-mini, claude-3-opus-20240229, deepseek-chat, etc.)
 ```
+
+### 🆓 Using Free API Credits for Testing  
+
+Some **AI model providers offer free API credits** with limitations, making them great for **testing and experimentation**.  
+
+- **Google AI Studio** provides [free access](https://ai.google.dev/pricing#1_5flash) to **Gemini 1.5 Flash**.  
+  - 🔗 **Generate an API Key**: [Google AI Studio](https://aistudio.google.com/app/apikey)  
+  - 📌 Use `google` as the **PORTKEY_MODEL_PROVIDER** and `gemini-1.5-flash` as the **PORTKEY_MODEL**.  
+
+- **Other Free Providers**: A list of additional **free API providers** can be found [here](https://github.com/cheahjs/free-llm-api-resources).  
+  - 🚨 Keep in mind that **limitations and terms of service apply** for free access.  
+
+⚠️ **Legal Disclaimer**:  
+- **MultiversX does not take responsibility** for how you use these APIs. Ensure you comply with each provider's **terms of service and restrictions** when using their free-tier models.  
 
 ---
 
