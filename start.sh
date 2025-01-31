@@ -39,14 +39,14 @@ open_browser() {
   
   case "$OS" in
     "Darwin") # macOS
+      open "http://localhost:8787/public/logs"
       open "http://localhost:5173"
-      open "http://localhost:8787/public"
       ;;
     
     "Linux") # Linux
       if command -v xdg-open &> /dev/null; then
+        xdg-open "http://localhost:8787/public/logs"
         xdg-open "http://localhost:5173"
-        xdg-open "http://localhost:8787/public"
       else
         echo "❌ Error: No default browser found. Install xdg-utils or specify a browser manually."
       fi
@@ -54,8 +54,8 @@ open_browser() {
     
     "MINGW64_NT"*|"CYGWIN_NT"*|"MSYS_NT"*) # Windows
       timeout /t 5 >nul
+      start "" "http://localhost:8787/public/logs"
       start "" "http://localhost:5173"
-      start "" "http://localhost:8787/public"
       ;;
     
     *)
