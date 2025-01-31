@@ -2,6 +2,8 @@
 
 # MultiversX AI Agent Kit
 
+![mx-agent-kit.png](https://cdn.multiversx.com/misc/mx-agent-kit.png) 
+
 </div>
 
 The **[MultiversX](https://multiversx.com/) Agent Kit** is an open-source toolkit empowering AI Agents to seamlessly interact with the **MultiversX Ecosystem**. Harnessing the combined strength of **[Eliza AI Agent Framework](https://github.com/multiversx/eliza)** and **[Portkey's AI Gateway](https://github.com/multiversx/gateway/)**, the **MultiversX Agent Kit** connects your agents to 250+ LLM providers and most major **AI Agent Frameworks**.
