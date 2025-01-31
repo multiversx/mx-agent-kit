@@ -101,7 +101,7 @@ chmod +x setup.sh
 In the **[Eliza submodule](https://github.com/multiversx/eliza)**, set up your `.env` file with the necessary API keys:  
 
 ```sh
-PORTKEY_PROVIDER_API_KEY=   # Your Portkey API Key (e.g., sk-XXXX for OpenAI)
+PORTKEY_PROVIDER_API_KEY=   # Your Portkey Model Provider API Key (e.g., sk-XXXX for OpenAI)
 PORTKEY_MODEL_PROVIDER=     # Model Provider (e.g., openai, anthropic, deepseek, etc.)
 PORTKEY_MODEL=              # Model Name (e.g., gpt-4o-mini, claude-3-opus-20240229, deepseek-chat, etc.)
 ```
@@ -140,6 +140,16 @@ pnpm run start:client
 cd gateway
 npm run dev:node
 ```
+
+---
+
+### 🎭 Step 4: Configure Eliza Characters  
+
+Eliza supports **custom AI characters**, allowing you to define their **personalities, behaviors, and conversation styles**. You can:  
+
+- 📝 **Use Pre-Built Characters** – Explore existing **character templates** [here](https://github.com/multiversx/eliza/tree/develop/characters).  
+- 🎨 **Customize Your Own** – Modify or create new characters following the **official character configuration guide** in the [documentation](https://elizaos.github.io/eliza/docs/core/characterfile/).  
+- 📺 **Watch the Setup Tutorial** – Learn how to set up **Eliza characters** in this [video guide](https://youtu.be/vf-umucBhPI?t=218).  
 
 ---
 
