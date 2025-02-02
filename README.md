@@ -8,6 +8,12 @@
 
 The **[MultiversX](https://multiversx.com/) Agent Kit** is an open-source toolkit empowering AI Agents to seamlessly interact with the **MultiversX Ecosystem**. Harnessing the combined strength of **[Eliza AI Agent Framework](https://github.com/multiversx/eliza)** and **[Portkey's AI Gateway](https://github.com/multiversx/gateway/)**, the **MultiversX Agent Kit** connects your agents to 250+ LLM providers and most major **AI Agent Frameworks**.
 
+<div align="center">
+  
+📺 **AI Agent Kit Presentation**  
+🔗 [Watch the presentation](https://www.youtube.com/watch?v=m4bdpcoNLqE) 
+</div>
+
 # 🤖 Eliza & The MultiversX Plugin  
 
 At the heart of **MultiversX Agent Kit** is [**Eliza**](https://github.com/multiversx/eliza), an advanced **AI Agent Framework** designed for seamless integration with different AI Models, Blockchain Networks, Social Media Platforms and other real-world applications. The **MultiversX Eliza Plugin** extends its capabilities, enabling direct interaction with the **MultiversX Blockchain** for automated, secure, and intelligent transactions.  
@@ -39,11 +45,11 @@ These videos provide a **detailed walkthrough** to help you get started quickly 
 ---
 
 # 🚀 AI Agents - Gateway Features  
-With **MultiversX Agent Kit**, powered by [Portkey's AI Gateway](https://github.com/multiversx/gateway/), your AI Agents gain access to **250+ model providers** and **full integration with leading AI Agent Frameworks**, enabling **seamless, intelligent, and autonomous decision-making** across the **MultiversX Ecosystem**.  
+With **MultiversX Agent Kit**, powered by [Portkey's AI Gateway](https://portkey.ai/docs/product/ai-gateway), your AI Agents gain access to **250+ model providers** and **full integration with leading AI Agent Frameworks**, enabling **seamless, intelligent, and autonomous decision-making** across the **MultiversX Ecosystem**.  
 
 ### 🌎 Universal Model & AI Agent Framework Support  
-- **250+ Model Providers** – Seamlessly connect to a vast array of **LLMs, vision models, and multimodal AI solutions**.  
-- **Full AI Agent Framework Integration** – Natively supports **[Eliza](https://github.com/multiversx/eliza), OpenAI Swarm, LlamaIndex, LangChain, LangGraph, AutoGen, CrewAI, Phidata, Control Flow, and Custom Agents**.  
+- **[250+ Model Providers](https://portkey.ai/docs/integrations/llms#supported-ai-providers)** – Seamlessly connect to a vast array of **LLMs, vision models, and multimodal AI solutions**.  
+- **[Comprehensive AI Agent Framework Integration](https://portkey.ai/docs/integrations/agents)** – Natively supports **[Eliza](https://github.com/multiversx/eliza), OpenAI Swarm, LlamaIndex, LangChain, LangGraph, AutoGen, CrewAI, Phidata, Control Flow, and Custom Agents**.  
 - **Cross-Provider Compatibility** – Effortlessly switch between AI providers without changing your implementation.  
 - **Multi-Modal AI Support** – Call **vision, text-to-speech, speech-to-text, and image generation models** from multiple sources with a **unified API**.  
 
